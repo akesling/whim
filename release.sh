@@ -72,7 +72,7 @@ function release_script_main() {
     NEW_VERSION=$(prompt_for_input)
 
     echo "Generating commit message from revision notes, old version, and new version."
-    COMMIT_MESSAGE=$(generate_commit_message ${REVISION_NOTES} ${OLD_VERSION} ${NEW_VERSION})
+    COMMIT_MESSAGE=$(generate_commit_message "${REVISION_NOTES}" "${OLD_VERSION}" "${NEW_VERSION}")
 
     echo "Commit message for version merge from dev branch is as follows:"
     echo "\"\"\""

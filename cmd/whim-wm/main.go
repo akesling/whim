@@ -7,7 +7,8 @@ import (
 )
 
 //go:generate bash update_version.sh ${GOFILE}
-const version string = "0.0.2"
+//go:generate git add ${GOFILE}
+const version string = "0.0.3"
 
 func main() {
 	if len(os.Args) == 2 && os.Args[1] == "-v" {
