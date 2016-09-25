@@ -6,7 +6,8 @@ import (
 	"os"
 )
 
-const version string = "0.0.0"
+//go:generate bash update_version.sh ${GOFILE}
+const version string = "0.0.2"
 
 func main() {
 	if len(os.Args) == 2 && os.Args[1] == "-v" {
